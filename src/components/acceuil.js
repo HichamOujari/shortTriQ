@@ -95,7 +95,7 @@ class Acceuil extends Component {
                 </form>
                 <div className="footer">
                     <p className="powerd">Powered By: <span className="auteur">Oujari Hicham</span></p>
-                    <p className="allright">All right reserved <span class="c"> C </span>{(new Date()).getFullYear()}</p>
+                    <p className="allright">All right reserved <span className="c"> C </span>{(new Date()).getFullYear()}</p>
                 </div>
             </Fragment>
         )

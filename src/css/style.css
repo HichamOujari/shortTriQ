@@ -215,6 +215,7 @@ background-size: cover;
     background: #D5F5E3;
     position: absolute;
     bottom: 0;
+    z-index: -1;
     width: stretch;
 }
 
