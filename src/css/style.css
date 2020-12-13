@@ -65,6 +65,7 @@ background-size: cover;
     top:0px;
     background-color: #D5F5E3;
     padding: 10px;
+    z-index: 7;
 }
 .title{
     font-size: 30px;
