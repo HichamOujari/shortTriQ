@@ -214,9 +214,8 @@ background-size: cover;
 
 .footer{
     background: #D5F5E3;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    z-index: -1;
     width: stretch;
 }
 
