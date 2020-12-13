@@ -84,7 +84,7 @@ class Acceuil extends Component {
                     <input id="lienfinal" required pattern="https?://.+.+." title="Paste here you URL with lowercase" className="input shorteninput" type="text" placeholder="Paste your url and shorten it now ..."/>
                     <div id="zoneshorting">
                         <input className="input updateinput site" disabled type="text" placeholder="https://shortTriq.rf.gd/"/>
-                        <input className="input updateinput" required pattern="[^' ',^'?',^'/',^'\']+" title="Error: delete space or '?'" type="text" placeholder="Customize Your Link"/>
+                        <input className="input updateinput" required pattern="[^' ',^'?',^'/',^'\\',]+" title="Error: delete space or '?'" type="text" placeholder="Customize Your Link"/>
                         <br></br>
                         <button className="shortenbtn" type="submit">
                             <span id="btnshort" >Shorten</span>
