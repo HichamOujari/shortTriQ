@@ -210,3 +210,33 @@ background-size: cover;
     font-family: fantasy;
     cursor: pointer;
 }
+
+.footer{
+    background: #D5F5E3;
+    position: fixed;
+    bottom: 0;
+    width: stretch;
+}
+
+.powerd{
+    display: inline;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline;
+    margin-left: 10px;
+}
+.allright{
+    font-size: 12px;
+    font-weight: 700;
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+.c{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0;
+}
+.auteur{
+    color:#1cb6b1;
+}

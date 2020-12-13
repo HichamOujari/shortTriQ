@@ -93,6 +93,10 @@ class Acceuil extends Component {
                     </div>
                     <p className="psousbtn"><i className="fa fa-info"></i> By using our service you accept the Terms and Privacy.</p>
                 </form>
+                <div className="footer">
+                    <p className="powerd">Powered By: <span className="auteur">Oujari Hicham</span></p>
+                    <p className="allright">All right reserved <span class="c"> C </span>{(new Date()).getFullYear()}</p>
+                </div>
             </Fragment>
         )
     }
