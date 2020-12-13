@@ -213,7 +213,7 @@ background-size: cover;
 
 .footer{
     background: #D5F5E3;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: stretch;
 }
