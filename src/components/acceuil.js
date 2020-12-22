@@ -21,6 +21,8 @@ class Acceuil extends Component {
         if(rslt===0){
             var zone =document.querySelector("#zoneshorting");
             zone.innerHTML=""
+            document.querySelector("#lienfinal").removeAttribute("pattern");
+            document.querySelector("#lienfinal").removeAttribute("required");
             document.querySelector("#modalQRCode").value=""
             var ele = document.createElement('button')
             ele.className="btnaftershorting"
