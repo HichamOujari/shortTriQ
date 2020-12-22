@@ -1,6 +1,7 @@
 import React,{Component,Fragment} from "react"
 import logo from "../Assets/logo.png"
 import Swal from 'sweetalert2'
+import QRCode from 'qrcode.react';
 
 class Acceuil extends Component {
     loading(i){
@@ -14,12 +15,13 @@ class Acceuil extends Component {
     }
     shorting(e){
         e.preventDefault();
-        this.loading(1)
+        //this.loading(1);
         var rslt=0;
         //le cas de success
-        if(rslt===1){
+        if(rslt===0){
             var zone =document.querySelector("#zoneshorting");
             zone.innerHTML=""
+            document.querySelector("#modalQRCode").value=""
             var ele = document.createElement('button')
             ele.className="btnaftershorting"
             ele.onclick=()=>{
@@ -46,7 +48,8 @@ class Acceuil extends Component {
             ele = document.createElement('button')
             ele.className="btnaftershorting"
             ele.onclick=()=>{
-                alert("code QR")
+                document.querySelector(".modal").style.display="block"
+                document.querySelector(".modal").style.animation="modalQr 1s 1"
             }
             ele.innerHTML="Code QR";
             zone.append(ele);
@@ -67,6 +70,9 @@ class Acceuil extends Component {
     refresh(){
         document.location.reload();
     }
+    disapire(){
+        document.querySelector(".modal").style.display="none"
+    }
     componentDidMount(){
 
     }
@@ -76,6 +82,11 @@ class Acceuil extends Component {
                 <div className="navbar">
                     <p className="title"><i className="fa logo fa-link"></i> Short<span className="soustitle">TriQ</span></p>
                     <p className="support">support US</p>
+                </div>
+                <div className="modal">
+                    <p className="modaltitre">The QRCode is generated successfully</p>
+                    <br></br><QRCode id="modalQRCode" value="" />
+                    <br/><button onClick={this.disapire} className="modalOK">OK</button>
                 </div>
                 <form onSubmit={this.shorting.bind(this)} className="content">
                     <img  src={logo} alt="..." className="souslogo" />

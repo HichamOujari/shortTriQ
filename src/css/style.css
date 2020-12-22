@@ -241,3 +241,37 @@ background-size: cover;
 .auteur{
     color:#1cb6b1;
 }
+.modal{
+    position: fixed;
+    z-index: 3;
+    display: none;
+    margin-top: 70px;
+    background: #ABEBC6;
+    text-align: center;
+    top: 60px;
+    padding: 20px;
+    left:calc(50% - 130px);
+    font-size: 15px;
+    font-weight: 600;
+}
+.modalOK{
+    margin-top: 10px;
+    width: 100px;
+    background: rgb(98, 207, 184);
+    border: 1px solid rgb(98, 207, 184);
+    border-radius: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+.modalOK:hover{
+    background: rgb(83, 168, 83);
+}
+
+@keyframes modalQr{
+    from {
+        top:-50%;
+    }
+    to{
+        top:60px;
+    }
+}
