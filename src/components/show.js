@@ -56,10 +56,13 @@ class Show extends Component {
         Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
-                    this.setState({
-                        //lien:res.data.lien,
-                    })
-                    document.querySelector("#loading").remove();
+                    /*this.setState({
+                        lien:res.data.lien,
+                    })*/
+                    var a;
+                    if(a =document.querySelector("#loading") != numm){
+                        a.remove();
+                    }
                     document.querySelector(".show-content").style.display="block";
                 }else{
                     document.location.href=url+"error"
