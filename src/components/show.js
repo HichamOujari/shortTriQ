@@ -56,11 +56,11 @@ class Show extends Component {
         Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
-                    /*this.setState({
+                    this.setState({
                         lien:res.data.lien,
-                    })*/
+                    })
                     var a;
-                    if(a =document.querySelector("#loading") != numm){
+                    if(a =document.querySelector("#loading") != null){
                         a.remove();
                     }
                     document.querySelector(".show-content").style.display="block";
@@ -70,9 +70,6 @@ class Show extends Component {
             })
     }
     render(){
-        this.setState({
-            lien:this.props.match.params.path
-        })
         return(
             <Fragment>
                 <div className="navbar">
@@ -81,7 +78,7 @@ class Show extends Component {
                 </div>
                 <div className="modal">
                     <p className="modaltitre">The QRCode is generated successfully</p>
-                    <br></br><QRCode id="modalQRCode" value={this.state.lien} />
+                    <br></br><QRCode id="modalQRCode" value={this.props.match.params.path} />
                     <br/><button onClick={this.disapire} className="modalOK">OK</button>
                 </div>
                 <div className="content bg-none" id="loading">
@@ -91,7 +88,7 @@ class Show extends Component {
                     <img  src={logo} alt="..." className="souslogo" />
                     <p className="ptitle">URL Shortener</p>
                     <p className="psoustitle">Simplify your links, track  manage them</p>
-                    <input id="lienfinal" disabled value={this.state.lien} className="input bordered shorteninput" type="text"/>
+                    <input id="lienfinal" disabled value={this.props.match.params.path} className="input bordered shorteninput" type="text"/>
                     <div id="zoneshorting">
                         <button className="btnaftershorting" onClick={this.copy}>Copy Link</button>
                         <button className="btnaftershorting" onClick={this.codeQR}>CodeQR</button>
