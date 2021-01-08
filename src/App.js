@@ -13,6 +13,7 @@ class App extends Component{
         <Switch>
             <Route path="/home" exact component={Acceuil} />
             <Route exact path="/show/:path" component={Show} />
+            <Route exact path="/error" component={Error} />
             <Route exact path="/:path" component={Redirect} />
             <Route exact path="/*/*" component={Error} />
             <Route path="/" component={Acceuil} />
