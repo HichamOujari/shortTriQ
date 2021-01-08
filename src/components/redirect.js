@@ -11,6 +11,16 @@ class Redirect extends Component {
         lien : ""
     }
     componentDidMount(){
+        if(this.props.match.params.path==="error"){
+            return(
+                < Error />
+            )
+        }
+        if(this.props.match.params.path==="show"){
+            return(
+                <Acceuil />
+            )
+        }else{
             Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
@@ -25,6 +35,7 @@ class Redirect extends Component {
                 )
             })
         }
+    }
     render(){
         return (
             <Fragment>
