@@ -1,4 +1,4 @@
-import React,{Component} from "react"
+import React,{Component, Fragment} from "react"
 import Error from "./error"
 import Axios from 'axios'
 import Acceuil from "../components/acceuil"
@@ -25,12 +25,7 @@ class Redirect extends Component {
             Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
-                    this.setState({
-                        lien:res.data.lien,
-                    })
-                    setTimeout(() => {
-                        document.location.href=this.state.lien
-                    }, 5000);
+                    document.location.href=res.data.lien
                 }else{
                     document.location.href=url+"error"
                 }
@@ -41,6 +36,13 @@ class Redirect extends Component {
                 )
             })
         }
+    }
+    render(){
+        return (
+            <Fragment>
+                
+            </Fragment>
+        )
     }
 }
 

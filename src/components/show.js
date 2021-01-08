@@ -23,7 +23,7 @@ class Show extends Component {
             })
             return 0;
         }else{
-            document.querySelector(".modal").style.display="flex"
+            document.querySelector(".modal").style.display="block"
             document.querySelector(".modal").style.animation="modalQr 1s 1"
         }
     }
