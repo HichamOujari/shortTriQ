@@ -57,7 +57,7 @@ class Show extends Component {
             .then(res=>{
                 if(res.data.isExist===1){
                     this.setState({
-                        lien:res.data.lien,
+                        //lien:res.data.lien,
                     })
                     document.querySelector("#loading").remove();
                     document.querySelector(".show-content").style.display="block";
@@ -67,6 +67,9 @@ class Show extends Component {
             })
     }
     render(){
+        this.setState({
+            lien:this.props.match.params.path
+        })
         return(
             <Fragment>
                 <div className="navbar">
