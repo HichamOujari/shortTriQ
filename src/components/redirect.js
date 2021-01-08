@@ -2,7 +2,6 @@ import React,{Component, Fragment} from "react"
 import Error from "./error"
 import Axios from 'axios'
 import Acceuil from "../components/acceuil"
-import img from "../Assets/loading.gif"
 var urls="https://shorttriq-server.herokuapp.com/"
 var url = "https://shorttriq.herokuapp.com/"
 //var urlS="http://localhost:4000/"
@@ -40,7 +39,7 @@ class Redirect extends Component {
     render(){
         return (
             <Fragment>
-                
+
             </Fragment>
         )
     }
