@@ -85,7 +85,7 @@ class Show extends Component {
                     <img  src={logo} alt="..." className="souslogo" />
                     <p className="ptitle">URL Shortener</p>
                     <p className="psoustitle">Simplify your links, track  manage them</p>
-                    <input id="lienfinal" disabled value={"https://shorttriq.herokuapp.com/"+this.props.match.params.path} className="input bordered shorteninput" type="text"/>
+                    <input id="lienfinal" value={"https://shorttriq.herokuapp.com/"+this.props.match.params.path} className="input bordered shorteninput" type="text"/>
                     <div id="zoneshorting">
                         <button className="btnaftershorting" onClick={this.copy}>Copy Link</button>
                         <button className="btnaftershorting" onClick={this.codeQR}>CodeQR</button>

@@ -250,8 +250,7 @@ background-size: cover;
     text-align: center;
     top: 60px;
     padding: 20px;
-    justify-content: center;
-    align-items: center;
+    left:calc(50% - 170px);
     font-size: 15px;
     font-weight: 600;
 }
