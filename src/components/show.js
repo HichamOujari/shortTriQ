@@ -23,7 +23,7 @@ class Show extends Component {
             })
             return 0;
         }else{
-            document.querySelector(".modal").style.display="block"
+            document.querySelector(".modal").style.display="flex"
             document.querySelector(".modal").style.animation="modalQr 1s 1"
         }
     }
@@ -88,7 +88,7 @@ class Show extends Component {
                     <input id="lienfinal" disabled value={this.state.lien} className="input bordered shorteninput" type="text"/>
                     <div id="zoneshorting">
                         <button className="btnaftershorting" onClick={this.copy}>Copy Link</button>
-                        <button className="btnaftershorting" onClick={this.codeQR}>Get CodeQR</button>
+                        <button className="btnaftershorting" onClick={this.codeQR}>CodeQR</button>
                         <button className="btnaftershorting" onClick={this.refresh}>Re-Short</button>
                     </div>
                     <p className="psousbtn"><i className="fa fa-info"></i> By using our service you accept the Terms and Privacy.</p>

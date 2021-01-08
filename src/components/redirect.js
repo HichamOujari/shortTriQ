@@ -43,8 +43,6 @@ class Redirect extends Component {
         }
     }
     render(){
-        document.body.style.background="url(https://www.owllabs.com/hubfs/fog-3622519_1920-jpg.jpeg)"
-        document.body.style.backgroundSize="cover"
         if(this.props.match.params.path==="error"){
             return(
                 < Error />
