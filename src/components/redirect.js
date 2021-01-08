@@ -42,24 +42,6 @@ class Redirect extends Component {
             })
         }
     }
-    render(){
-        if(this.props.match.params.path==="error"){
-            return(
-                < Error />
-            )
-        }
-        if(this.props.match.params.path==="show"){
-            return(
-                <Acceuil />
-            )
-        }
-        return(
-            <div className="redirect">
-                <img className="redirectimg" src={img}  alt=""/>
-                You will be redirected in 5 seconds or click <a className="redirecthere" href={this.state.lien}>here</a>
-            </div>
-        )
-    }
 }
 
 export default Redirect
