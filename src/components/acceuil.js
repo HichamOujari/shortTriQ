@@ -3,8 +3,8 @@ import logo from "../Assets/logo.png"
 import Axios from 'axios'
 var urls="https://shorttriq-server.herokuapp.com/"
 var url = "https://shorttriq.herokuapp.com/"
-//var urlS="http://localhost:4000/"
-//var url = "http://localhost:3000/
+//var urls ="http://localhost:4000/"
+//var url = "http://localhost:3000/"
 class Acceuil extends Component {
     loading(i){
         document.querySelector("#btnshort").style.display="none";
