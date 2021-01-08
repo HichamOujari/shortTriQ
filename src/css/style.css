@@ -263,6 +263,19 @@ background-size: cover;
     height: 20px;
     cursor: pointer;
 }
+.loading-img{
+    width: 200px;
+}
+.bg-none{
+    background: none;
+}
+.show-content{
+    display: none;
+}
+.bordered{
+    border: 1px solid black;
+    font-size: 16px;
+}
 .modalOK:hover{
     background: rgb(83, 168, 83);
 }
@@ -274,4 +287,38 @@ background-size: cover;
     to{
         top:60px;
     }
+}
+.redirecthere{
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    text-transform: capitalize;
+    color:cadetblue;
+    background:#ddd;
+    padding: 10px;
+    width: 100px;
+    margin-left: calc(50% - 50px);
+    border-radius: 40px;
+    transition: 1s;
+    transition-property: all;
+}
+.redirecthere:hover{
+    background: cadetblue;
+    transform: scale(1.2);
+    color:#ddd;
+}
+.redirectimg{
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 50px);
+    display: block;
+}
+.redirect{
+    font-size: 20px;
+    position: fixed;
+    text-align: center;
+    display: block;
+    top:30%;
+    float: center;
+    width: 100%;
 }
