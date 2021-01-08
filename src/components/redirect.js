@@ -3,6 +3,10 @@ import Error from "./error"
 import Axios from 'axios'
 import Acceuil from "../components/acceuil"
 import img from "../Assets/loading.gif"
+var urls="https://shorttriq-server.herokuapp.com/"
+var url = "https://shorttriq.herokuapp.com/"
+//var urlS="http://localhost:4000/"
+//var url = "http://localhost:3000/
 class Redirect extends Component {
     state={
         lien : ""
@@ -18,18 +22,17 @@ class Redirect extends Component {
                 <Acceuil />
             )
         }else{
-            Axios.get("https://shorttriq-server.herokuapp.com/check/"+this.props.match.params.path)
+            Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
                     this.setState({
                         lien:res.data.lien,
                     })
-                    console.log("&&&&&")
                     setTimeout(() => {
                         document.location.href=this.state.lien
                     }, 5000);
                 }else{
-                    document.location.href="https://shorttriq.herokuapp.com/error"
+                    document.location.href=url+"error"
                 }
             })
             .catch(err =>{
@@ -40,6 +43,8 @@ class Redirect extends Component {
         }
     }
     render(){
+        document.body.style.background="url(https://www.owllabs.com/hubfs/fog-3622519_1920-jpg.jpeg)"
+        document.body.style.backgroundSize="cover"
         if(this.props.match.params.path==="error"){
             return(
                 < Error />

@@ -1,7 +1,10 @@
 import React,{Component,Fragment} from "react"
 import logo from "../Assets/logo.png"
 import Axios from 'axios'
-//
+var urls="https://shorttriq-server.herokuapp.com/"
+var url = "https://shorttriq.herokuapp.com/"
+//var urlS="http://localhost:4000/"
+//var url = "http://localhost:3000/
 class Acceuil extends Component {
     loading(i){
         document.querySelector("#btnshort").style.display="none";
@@ -10,7 +13,7 @@ class Acceuil extends Component {
     shorting(e){
         e.preventDefault();
         this.loading(1);
-        Axios.get("https://shorttriq-server.herokuapp.com/insert",{
+        Axios.get(urls+"insert",{
             params: {
                     route:document.querySelector("#newroute").value,
                     address:document.querySelector("#lienfinal").value,
@@ -18,7 +21,7 @@ class Acceuil extends Component {
         })
             .then(res=>{
                 setTimeout(() => {
-                    document.location.href="https://shorttriq.herokuapp.com/show/"+res.data;
+                    document.location.href=url+"show/"+res.data;
                 }, 2000);
             })
             .catch(err=>{

@@ -4,7 +4,10 @@ import Swal from 'sweetalert2'
 import logo from "../Assets/logo.png"
 import loading from "../Assets/loading.gif"
 import QRCode from 'qrcode.react';
-
+var urls="https://shorttriq-server.herokuapp.com/"
+var url = "https://shorttriq.herokuapp.com/"
+//var urlS="http://localhost:4000/"
+//var url = "http://localhost:3000/
 class Show extends Component {
 
     state = {
@@ -44,13 +47,13 @@ class Show extends Component {
         })
     }
     refresh(){
-        document.location.href="https://shorttriq.herokuapp.com/"
+        document.location.href=url
     }
     disapire(){
         document.querySelector(".modal").style.display="none"
     }
     componentDidMount(){
-        Axios.get("https://shorttriq-server.herokuapp.com/check/"+this.props.match.params.path)
+        Axios.get(urls+"check/"+this.props.match.params.path)
             .then(res=>{
                 if(res.data.isExist===1){
                     this.setState({
@@ -59,7 +62,7 @@ class Show extends Component {
                     document.querySelector("#loading").remove();
                     document.querySelector(".show-content").style.display="block";
                 }else{
-                    document.location.href="https://shorttriq.herokuapp.com/error"
+                    document.location.href=url+"error"
                 }
             })
     }
