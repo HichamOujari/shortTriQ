@@ -75,7 +75,7 @@ class Show extends Component {
                 </div>
                 <div className="modal">
                     <p className="modaltitre">The QRCode is generated successfully</p>
-                    <br></br><QRCode id="modalQRCode" value={this.props.match.params.path} />
+                    <br></br><QRCode id="modalQRCode" value={"https://shorttriq.herokuapp.com/"+this.props.match.params.path} />
                     <br/><button onClick={this.disapire} className="modalOK">OK</button>
                 </div>
                 <div className="content bg-none" id="loading">
@@ -85,7 +85,7 @@ class Show extends Component {
                     <img  src={logo} alt="..." className="souslogo" />
                     <p className="ptitle">URL Shortener</p>
                     <p className="psoustitle">Simplify your links, track  manage them</p>
-                    <input id="lienfinal" disabled value={this.props.match.params.path} className="input bordered shorteninput" type="text"/>
+                    <input id="lienfinal" disabled value={"https://shorttriq.herokuapp.com/"+this.props.match.params.path} className="input bordered shorteninput" type="text"/>
                     <div id="zoneshorting">
                         <button className="btnaftershorting" onClick={this.copy}>Copy Link</button>
                         <button className="btnaftershorting" onClick={this.codeQR}>CodeQR</button>
